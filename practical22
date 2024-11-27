@@ -1,0 +1,70 @@
+Program: 22 
+ 
+Code: // Practical 22:Taking Marks As Input And Sort In Maximum Minimum Average And Total Mark. 
+ 
+#include <stdio.h> 
+int totalmarks(int a[],int);// Here This Function Stands For Calculate Total Marks. 
+float avg(int[],int);       // Here This Function Stands For calculate Average Of Given Marks. 
+int max(int [],int);        // Here This Function Stands For Calculate Maximum Of Given Marks. 
+int min(int[],int);         // Here This Function Stands For Calculate Minimum Of Given Marks. 
+void main() 
+{ 
+    int marks[10],n ; 
+    printf("Enter The Number Of Students: ");// Taking Number Of Students. 
+    scanf("%d",&n); 
+    printf("Enter The Marks Of Ccp Of Students:\n"); 
+    for(int i =0 ; i<n ; i++) //This Loop Stands For Taking CCP Marks As Input. 
+    { 
+        printf("Student %d: " , i+1); 
+        scanf("%d",&marks[i]); 
+    } 
+    printf("\n1.Total Marks : %d\n",totalmarks(marks , n)); 
+    printf("2.Average Marks: %0.2f\n",avg(marks , n)); 
+    printf("3.Maximum Marks: %d\n",max(marks , n)); 
+     printf("4.Minimum Marks: %d\n",min(marks , n)); 
+} 
+int totalmarks(int m[] , int j) 
+{ 
+    int i , sum=0 ; 
+    for(i=0 ; i<j ; i++) 
+    { 
+        sum = sum + m[i]; 
+    } 
+    return sum; 
+} 
+float avg(int m[] , int j) 
+{ 
+    int i , sum=0 ; 
+    float average; 
+    for(i=0 ; i<j ; i++) 
+    { 
+        sum = sum + m[i]; 
+    } 
+    average = ((float)sum/j); 
+    return average; 
+} 
+int max(int m[] , int j) 
+{ 
+    int i , maximum=0; 
+    for(i=0 ; i<j ; i++) 
+    { 
+        if(m[i]>maximum) 
+        { 
+            maximum = m[i]; 
+        } 
+    } 
+    return maximum; 
+} 
+int min(int m[] , int j) 
+{ 
+    int i , minimum = m[0]; 
+    for(i=0 ; i<j ; i++) 
+    { 
+        if(m[i]<minimum) 
+        { 
+            minimum = m[i]; 
+        } 
+    } 
+    return minimum;
+    printf("\n\n\n24ce032_TARANG");
+   }
